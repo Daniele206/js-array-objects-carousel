@@ -37,11 +37,13 @@ let counter = 0;
 
 // array-className
 const imgCollection = document.getElementsByClassName('img');
+const imgCollectionfullText = document.getElementsByClassName('text_img');
 const imgPreviewCollection = document.getElementsByClassName('img-preview');
 
 // function
 function downScroll(){
   imgCollection[counter].classList.add('hide');
+  imgCollectionfullText[counter].classList.add('hide');
   imgPreviewCollection[counter].classList.add('shadow');
   imgPreviewCollection[counter].classList.remove('selected');
   counter++
@@ -49,12 +51,14 @@ function downScroll(){
     counter = 0;
   }
   imgCollection[counter].classList.remove('hide');
+  imgCollectionfullText[counter].classList.remove('hide');
   imgPreviewCollection[counter].classList.remove('shadow');
   imgPreviewCollection[counter].classList.add('selected');
 };
 
 function upScroll(){
   imgCollection[counter].classList.add('hide');
+  imgCollectionfullText[counter].classList.add('hide');
   imgPreviewCollection[counter].classList.add('shadow');
   imgPreviewCollection[counter].classList.remove('selected');
   counter--
@@ -62,6 +66,7 @@ function upScroll(){
     counter = (imgCollection.length - 1);
   }
   imgCollection[counter].classList.remove('hide');
+  imgCollectionfullText[counter].classList.remove('hide');
   imgPreviewCollection[counter].classList.remove('shadow');
   imgPreviewCollection[counter].classList.add('selected');
 }
@@ -70,12 +75,19 @@ function upScroll(){
 
 for(let i = 0; i < listImg.length; i++){
   const img = listImg[i].img;
+  const imgTitle = listImg[i].title;
+  const imgText = listImg[i].description;
   imgContainer.innerHTML += `
   <img class="img hide" src="${img}">
+  <div class="text_img text-white hide">
+    <h2 class="fw-bold">${imgTitle}</h2>
+    <span>${imgText}</span>
+  </div>
   `
 };
 
 imgCollection[counter].classList.remove('hide');
+imgCollectionfullText[counter].classList.remove('hide');
 imgPreviewCollection[counter].classList.remove('shadow');
 imgPreviewCollection[counter].classList.add('selected');
 
