@@ -32,6 +32,7 @@ const fullCarousell = document.querySelector('.full-carousell');
 const imgContainer = document.querySelector('.img-container');
 const topBtn = document.querySelector('.top');
 const bottomBtn = document.querySelector('.bottom');
+const rotateSimbol = document.querySelector('.my-rotate');
 let autoScrol;
 let counter = 0;
 
@@ -131,12 +132,15 @@ startStop.addEventListener('click', function(){
   if(rotationOn === 'true'){
     clearInterval(autoScrol);
     rotationOn = 'false';
+    rotateSimbol.classList.add('hide');
   }else if(rotationOn === 'false' && rotation === 'top'){
     autoScrol = setInterval(upScroll, 3000);
     rotationOn = 'true';
+    rotateSimbol.classList.remove('hide');
   }else if(rotationOn === 'false' && rotation === 'bottom'){
     autoScrol = setInterval(downScroll, 3000);
     rotationOn = 'true';
+    rotateSimbol.classList.remove('hide');
   }
 })
 
