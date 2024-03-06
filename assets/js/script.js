@@ -46,6 +46,8 @@ const select2 = document.getElementById('select2');
 const select3 = document.getElementById('select3');
 const select4 = document.getElementById('select4');
 const select5 = document.getElementById('select5');
+const stopStartLoop = document.querySelector('.stop_start_loop');
+const invertLoop = document.querySelector('.invert_loop');
 
 // function
 function downScroll(){
@@ -104,13 +106,31 @@ topBtn.addEventListener('click', upScroll);
 bottomBtn.addEventListener('click', downScroll);
 
 autoScrol = setInterval(downScroll, 3000);
+let rotation = 'bottom';
+console.log(rotation);
+
+invertLoop.addEventListener('click',function (){
+  if(rotation === 'bottom'){
+    clearInterval(autoScrol);
+    autoScrol = setInterval(upScroll, 3000);
+    rotation = 'top';
+  }else if(rotation === 'top'){
+    clearInterval(autoScrol);
+    autoScrol = setInterval(downScroll, 3000);
+    rotation = 'bottom';
+  }
+})
 
 fullCarousell.addEventListener('mouseenter', function(){
   clearInterval(autoScrol);
 });
 
 fullCarousell.addEventListener('mouseleave', function(){
-  autoScrol = setInterval(downScroll, 3000);
+  if(rotation === 'top'){
+    autoScrol = setInterval(upScroll, 3000);
+  }else if(rotation === 'bottom'){
+    autoScrol = setInterval(downScroll, 3000);
+  }
 });
 
 select1.addEventListener('click', function(){
