@@ -3,27 +3,27 @@ const listImg = [
   {
     img: './assets/img/01.webp',
     title: 'Spiderman',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro.'
+    description: 'Immergiti nei panni di Peter Parker, lunico e inimitabile amichevole spiderman di quartiere.'
   },
   {
     img: './assets/img/02.webp',
     title: 'Ratchet & Clank',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro.'
+    description: 'Ratchet é un meccanico della razza Lombax che grazie al Dimensionatore é pronto a intraprendere mille avventure.'
   },
   {
     img: './assets/img/03.webp',
     title: 'Fortnite',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro.'
+    description: 'Metti play prendi il bus e lanciati sull\'isola, si parte in 100 ma solo uno sopravvive nella Battle-Royale.'
   },
   {
     img: './assets/img/04.webp',
     title: 'Cat Game',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro.'
+    description: 'Impersonifica un gatto nel suo cuoitidiano, all\'apparenza potrebbe sembrare noiso ma dietero c\'é molto di piú.'
   },
   {
     img: './assets/img/05.webp',
     title: 'Marvel Game',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, porro.'
+    description: 'Entra nell\'universo marvel é sconfiggi decine di suoper cattivi utilizzando a turno tutti i tuoi super eroi preferiti.'
   },
 ];
 
