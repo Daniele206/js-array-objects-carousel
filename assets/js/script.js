@@ -40,6 +40,13 @@ const imgCollection = document.getElementsByClassName('img');
 const imgCollectionfullText = document.getElementsByClassName('text_img');
 const imgPreviewCollection = document.getElementsByClassName('img-preview');
 
+// input
+const select1 = document.getElementById('select1');
+const select2 = document.getElementById('select2');
+const select3 = document.getElementById('select3');
+const select4 = document.getElementById('select4');
+const select5 = document.getElementById('select5');
+
 // function
 function downScroll(){
   imgCollection[counter].classList.add('hide');
@@ -106,3 +113,137 @@ fullCarousell.addEventListener('mouseleave', function(){
   autoScrol = setInterval(downScroll, 3000);
 });
 
+select1.addEventListener('click', function(){
+  imgCollection[0].classList.remove('hide');
+  imgCollectionfullText[0].classList.remove('hide');
+  imgPreviewCollection[0].classList.remove('shadow');
+  imgPreviewCollection[0].classList.add('selected');
+  counter = 0;
+  imgCollection[1].classList.add('hide');
+  imgCollectionfullText[1].classList.add('hide');
+  imgPreviewCollection[1].classList.add('shadow');
+  imgPreviewCollection[1].classList.remove('selected');
+
+  imgCollection[2].classList.add('hide');
+  imgCollectionfullText[2].classList.add('hide');
+  imgPreviewCollection[2].classList.add('shadow');
+  imgPreviewCollection[2].classList.remove('selected');
+
+  imgCollection[3].classList.add('hide');
+  imgCollectionfullText[3].classList.add('hide');
+  imgPreviewCollection[3].classList.add('shadow');
+  imgPreviewCollection[3].classList.remove('selected');
+
+  imgCollection[4].classList.add('hide');
+  imgCollectionfullText[4].classList.add('hide');
+  imgPreviewCollection[4].classList.add('shadow');
+  imgPreviewCollection[4].classList.remove('selected');
+});
+
+select2.addEventListener('click', function(){
+  imgCollection[1].classList.remove('hide');
+  imgCollectionfullText[1].classList.remove('hide');
+  imgPreviewCollection[1].classList.remove('shadow');
+  imgPreviewCollection[1].classList.add('selected');
+  counter = 1;
+  imgCollection[0].classList.add('hide');
+  imgCollectionfullText[0].classList.add('hide');
+  imgPreviewCollection[0].classList.add('shadow');
+  imgPreviewCollection[0].classList.remove('selected');
+
+  imgCollection[2].classList.add('hide');
+  imgCollectionfullText[2].classList.add('hide');
+  imgPreviewCollection[2].classList.add('shadow');
+  imgPreviewCollection[2].classList.remove('selected');
+
+  imgCollection[3].classList.add('hide');
+  imgCollectionfullText[3].classList.add('hide');
+  imgPreviewCollection[3].classList.add('shadow');
+  imgPreviewCollection[3].classList.remove('selected');
+
+  imgCollection[4].classList.add('hide');
+  imgCollectionfullText[4].classList.add('hide');
+  imgPreviewCollection[4].classList.add('shadow');
+  imgPreviewCollection[4].classList.remove('selected');
+});
+
+select3.addEventListener('click', function(){
+  imgCollection[2].classList.remove('hide');
+  imgCollectionfullText[2].classList.remove('hide');
+  imgPreviewCollection[2].classList.remove('shadow');
+  imgPreviewCollection[2].classList.add('selected');
+  counter = 2;
+  imgCollection[1].classList.add('hide');
+  imgCollectionfullText[1].classList.add('hide');
+  imgPreviewCollection[1].classList.add('shadow');
+  imgPreviewCollection[1].classList.remove('selected');
+
+  imgCollection[0].classList.add('hide');
+  imgCollectionfullText[0].classList.add('hide');
+  imgPreviewCollection[0].classList.add('shadow');
+  imgPreviewCollection[0].classList.remove('selected');
+
+  imgCollection[3].classList.add('hide');
+  imgCollectionfullText[3].classList.add('hide');
+  imgPreviewCollection[3].classList.add('shadow');
+  imgPreviewCollection[3].classList.remove('selected');
+
+  imgCollection[4].classList.add('hide');
+  imgCollectionfullText[4].classList.add('hide');
+  imgPreviewCollection[4].classList.add('shadow');
+  imgPreviewCollection[4].classList.remove('selected');
+});
+
+select4.addEventListener('click', function(){
+  imgCollection[3].classList.remove('hide');
+  imgCollectionfullText[3].classList.remove('hide');
+  imgPreviewCollection[3].classList.remove('shadow');
+  imgPreviewCollection[3].classList.add('selected');
+  counter = 3;
+  imgCollection[1].classList.add('hide');
+  imgCollectionfullText[1].classList.add('hide');
+  imgPreviewCollection[1].classList.add('shadow');
+  imgPreviewCollection[1].classList.remove('selected');
+
+  imgCollection[2].classList.add('hide');
+  imgCollectionfullText[2].classList.add('hide');
+  imgPreviewCollection[2].classList.add('shadow');
+  imgPreviewCollection[2].classList.remove('selected');
+
+  imgCollection[0].classList.add('hide');
+  imgCollectionfullText[0].classList.add('hide');
+  imgPreviewCollection[0].classList.add('shadow');
+  imgPreviewCollection[0].classList.remove('selected');
+
+  imgCollection[4].classList.add('hide');
+  imgCollectionfullText[4].classList.add('hide');
+  imgPreviewCollection[4].classList.add('shadow');
+  imgPreviewCollection[4].classList.remove('selected');
+});
+
+select5.addEventListener('click', function(){
+  imgCollection[4].classList.remove('hide');
+  imgCollectionfullText[4].classList.remove('hide');
+  imgPreviewCollection[4].classList.remove('shadow');
+  imgPreviewCollection[4].classList.add('selected');
+  counter = 4;
+  imgCollection[1].classList.add('hide');
+  imgCollectionfullText[1].classList.add('hide');
+  imgPreviewCollection[1].classList.add('shadow');
+  imgPreviewCollection[1].classList.remove('selected');
+
+  imgCollection[2].classList.add('hide');
+  imgCollectionfullText[2].classList.add('hide');
+  imgPreviewCollection[2].classList.add('shadow');
+  imgPreviewCollection[2].classList.remove('selected');
+
+  imgCollection[3].classList.add('hide');
+  imgCollectionfullText[3].classList.add('hide');
+  imgPreviewCollection[3].classList.add('shadow');
+  imgPreviewCollection[3].classList.remove('selected');
+
+  imgCollection[0].classList.add('hide');
+  imgCollectionfullText[0].classList.add('hide');
+  imgPreviewCollection[0].classList.add('shadow');
+  imgPreviewCollection[0].classList.remove('selected');
+});

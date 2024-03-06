@@ -40,3 +40,4 @@ Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 2. Renderela di nuovo funzionante andado a modificare l'inner HTML.
 3. Aggiungere tramite js i titoli e le varie descrizioni.
 4. Aggiustare la pagina con css per mettere il testo nella posizione giusta.
+5. **Bonus1:**Far si che al click della miniatura appaia la sua immagine.
