@@ -125,6 +125,7 @@ invertLoop.addEventListener('click',function (){
 fullCarousell.addEventListener('mouseenter', function(){
   if(rotationOn === 'true'){
     clearInterval(autoScrol);
+    rotateSimbol.classList.add('hide');
   }
 });
 
@@ -148,8 +149,10 @@ fullCarousell.addEventListener('mouseleave', function(){
   if(rotationOn === 'true'){
     if(rotation === 'top'){
       autoScrol = setInterval(upScroll, 3000);
+      rotateSimbol.classList.remove('hide');
     }else if(rotation === 'bottom'){
       autoScrol = setInterval(downScroll, 3000);
+      rotateSimbol.classList.remove('hide');
     }
   }
 });
