@@ -46,8 +46,8 @@ const select2 = document.getElementById('select2');
 const select3 = document.getElementById('select3');
 const select4 = document.getElementById('select4');
 const select5 = document.getElementById('select5');
-const stopStartLoop = document.querySelector('.stop_start_loop');
 const invertLoop = document.querySelector('.invert_loop');
+const startStop = document.querySelector('.start_stop');
 
 // function
 function downScroll(){
@@ -107,7 +107,7 @@ bottomBtn.addEventListener('click', downScroll);
 
 autoScrol = setInterval(downScroll, 3000);
 let rotation = 'bottom';
-console.log(rotation);
+let rotationOn = 'true';
 
 invertLoop.addEventListener('click',function (){
   if(rotation === 'bottom'){
@@ -122,14 +122,31 @@ invertLoop.addEventListener('click',function (){
 })
 
 fullCarousell.addEventListener('mouseenter', function(){
-  clearInterval(autoScrol);
+  if(rotationOn === 'true'){
+    clearInterval(autoScrol);
+  }
 });
 
-fullCarousell.addEventListener('mouseleave', function(){
-  if(rotation === 'top'){
+startStop.addEventListener('click', function(){
+  if(rotationOn === 'true'){
+    clearInterval(autoScrol);
+    rotationOn = 'false';
+  }else if(rotationOn === 'false' && rotation === 'top'){
     autoScrol = setInterval(upScroll, 3000);
-  }else if(rotation === 'bottom'){
+    rotationOn = 'true';
+  }else if(rotationOn === 'false' && rotation === 'bottom'){
     autoScrol = setInterval(downScroll, 3000);
+    rotationOn = 'true';
+  }
+})
+
+fullCarousell.addEventListener('mouseleave', function(){
+  if(rotationOn === 'true'){
+    if(rotation === 'top'){
+      autoScrol = setInterval(upScroll, 3000);
+    }else if(rotation === 'bottom'){
+      autoScrol = setInterval(downScroll, 3000);
+    }
   }
 });
 
