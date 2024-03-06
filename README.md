@@ -41,3 +41,5 @@ Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay.
 3. Aggiungere tramite js i titoli e le varie descrizioni.
 4. Aggiustare la pagina con css per mettere il testo nella posizione giusta.
 5. **Bonus1:**Far si che al click della miniatura appaia la sua immagine.
+6. **Bonus2:**Aggiungere l'autoplay.
+7. **Bonus3:**Aggiungere i bottoni start e stop rotazione e inverti rotazione.
