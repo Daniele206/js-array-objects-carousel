@@ -18,7 +18,7 @@ const listImg = [
   {
     img: './assets/img/04.webp',
     title: 'Cat Game',
-    description: 'Impersonifica un gatto nel suo cuoitidiano, all\'apparenza potrebbe sembrare noiso ma dietero c\'é molto di piú.'
+    description: 'Impersonifica un gatto nel suo quoitidiano, all\'apparenza potrebbe sembrare noiso ma dietero c\'é molto di piú.'
   },
   {
     img: './assets/img/05.webp',
